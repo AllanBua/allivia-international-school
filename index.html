@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!-- Name: Bua Allan
+         Reg No: 25BSCS0102W
+         Assignment: Responsive Website Design -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Allivia International School</title>
 
-    <!-- Link to CSS to organize my page, margins, borders, colours, etc-->
+    <!-- Link to CSS to organize my page, margins, borders, colours, etc 
+     and font-family for a wide range of font styles-->
+     
      <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -17,12 +22,12 @@
   <header class="header">
     <div class="container header-content">
         
-        <!-- 1. LOGO ON LEFT -->
+        <!-- The school logo on the left -->
         <div class="logo-img">
             <img src="image/logo.png" alt="School Logo">
         </div>
 
-        <!-- 2. NAME AND MOTTO CENTER -->
+        <!-- School name and motto to be center aligned -->
         <div class="logo">
             <h1>ALLIVIA INTERNATIONAL SCHOOL</h1>
             <span>"Learn Today, Lead Tommorrow"</span>
@@ -30,7 +35,7 @@
 
     </div>
 
-    <!-- 3. NAV BAR AT BOTTOM - RIGHT ALIGNED -->
+    <!-- The Navigation bar at the right bottom of the header -->
     <nav class="navbar">
         <ul>
             <li><a href="index.html" class="active">Home</a></li>
@@ -43,15 +48,71 @@
   </header>
 
 
-    <!-- ================= HERO SECTION ================= -->
+    <!-- My Hero section -->
     <section class="hero">
-        
-        <div class="hero-content">
-            <div class="hero-banner">
-              <img src="image/students.png" alt="Students">
+        <div class="hero-slider">
+            <div class="slide fade active">
+                <img src="image/Students3.avif" alt="School">
+                <div class="slide-content">
+    <span class="small-top"><span class="dot"></span> YOUR NO.1 CHOICE FOR YOUR CHILD</span>
+    <h1>WE DON'T JUST<br>TEACH, WE TRANSFORM</h1>
+    <p>At Allivia International School, your child gets more than education — they get confidence, character, discipline and a future full of possibilities.</p>
+    <a href="#admissions" class="slide-btn">👉 Secure Your Child's Future </a>
+  </div>
             </div>
+            <div class="slide fade">
+                <img src="image/Students1.webp" alt="School 1">
+                <div class="slide-content">
+        <span class="small-top"><span class="dot"></span> ADMISSIONS OPEN 2026</span>
+        <h1>Learn Today,<br>Lead Tomorrow</h1>
+        <p>Inspiring Young Minds. Building Responsible Leaders at Allivia International School.</p>
+        <a href="#" class="slide-btn">👉 Join Us Now </a>
+      </div>
+            </div>
+            <div class="slide fade">
+                <img src="image/Students2.webp" alt="School 2">
+                <div class="slide-content">
+        <span class="small-top"><span class="dot"></span> EXCELLENCE IN EDUCATION</span>
+        <h1>Quality Education<br>For Every Child</h1>
+        <p>We nurture talent, confidence and character for a successful future.</p>
+        <a href="#" class="slide-btn">👉 Our Academics</a>
+      </div>
+            </div>
+            <div class="slide fade">
+                <img src="image/Students3.avif" alt="School 3">
+                <div class="slide-content">
+        <span class="small-top"><span class="dot"></span> WELCOME TO ALLIVIA</span>
+        <h1>Where Learners<br>Become Leaders</h1>
+        <p>A safe, loving and inspiring environment for your child to grow.</p>
+        <a href="#" class="slide-btn">👉 Explore Campus</a>
+      </div>
 
-            <p class="welcome-text">Welcome To Our School</p>
+            </div>
+            <div class="slide fade">
+                <img src="image/Students4.webp" alt="School 4">
+                <div class="slide-content">
+    <span class="small-top"><span class="dot"></span> BEYOND CLASSROOM</span>
+    <h1>MORE THAN<br>JUST BOOKS</h1>
+    <p>20+ Clubs, Sports, Music, Dance and Drama - We develop the whole child, body, mind and spirit.</p>
+    <a href="#" class="slide-btn">👉 Student Life</a>
+  </div>
+            </div>
+            <div class="slide fade">
+                <img src="image/Students5.jpeg" alt="School 5">
+                <div class="slide-content">
+    <span class="small-top"><span class="dot"></span> NURSERY & PRIMARY</span>
+    <h1>A GREAT PLACE<br>TO GROW</h1>
+    <p>A safe, loving and stimulating environment where every child is encouraged to discover their full potential.</p>
+    <a href="#" class="slide-btn">👉 Our Programs</a>
+  </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="welcome-section">
+        <div>
+
+            <h1 class="welcome-text">Welcome To Our School</h1>
             <br>
     
             <h2>Inspiring Young Minds. Building Responsible Leaders.</h2>
@@ -61,12 +122,25 @@
                 is encouraged to discover their potential, develop confidence
                 and prepare for a successful future.
             </p>
-
+            <br>
+            <p>
+               From our vibrant Nursery section to our focused Primary level, 
+               we provide a safe, stimulating and child-centered environment. 
+               With qualified, passionate teachers, modern learning facilities, 
+               and a blend of academics, sports, clubs, and spiritual growth, 
+               we ensure your child develops confidence, discipline, 
+               and leadership skills for a successful future.
+           </p>
+           <br>
+            <p>
+              Join 500+ happy families who have trusted us for over 15 years. 
+            </p>
+            <br>
+              <p><strong>At Allivia, we don't just teach — we transform.</strong></p>
+        
         </div>
-
     </section>
-
-    <!-- ================= FEATURES ================= -->
+    <!-- Features as to why you should choose our school -->
     <section class="features">
 
         <div class="container">
@@ -135,7 +209,7 @@
     </section>
 
 
-    <!-- ================= SCHOOL STATISTICS ================= -->
+    <!-- The school statistics -->
     <section class="statistics">
 
         <div class="container statistics-container">
@@ -165,10 +239,11 @@
     </section>
 
 
-    <!-- ================= CONTACT ================= -->
+    <!-- Our contacts and location -->
     <section class="contact">
 
         <div class="container">
+            <hr class="red-line">
 
             <div class="section-heading">
                 <p>GET IN TOUCH</p>
@@ -219,18 +294,46 @@
     </section>
 
 
-    <!-- ================= FOOTER ================= -->
+    <!-- The footer -->
     <footer class="footer">
 
         <div class="copyright">
 
             <p>
-                © 2026 Allivia International School. All Rights Reserved.
+                © 2026 Allivia International School. All Rights Reserved.   info@ais.ac.ug
             </p>
 
         </div>
 
     </footer>
+    <a href="#" id="backToTop">↑</a>
+<script>
+let slideIndex = 0;
+const slides = document.querySelectorAll(".slide");
 
+function showSlides() {
+  slides.forEach(slide => slide.classList.remove("active"));
+  slideIndex++;
+  if (slideIndex > slides.length) { slideIndex = 1; }
+  slides[slideIndex-1].classList.add("active");
+  setTimeout(showSlides, 8000); // changes every 8 seconds
+}
+showSlides();
+// Back to top button
+let backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTop.classList.add("show");
+  } else {
+    backToTop.classList.remove("show");
+  }
+});
+
+backToTop.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+</script>
 </body>
 </html>

@@ -262,7 +262,7 @@ body {
 
 .statistics {
     color: rgb(24, 5, 237);
-    padding: 50px 0;
+    padding: 20px 0;
 }
 
 .statistics-container {
@@ -293,18 +293,18 @@ body {
 /*  CONTACT  */
 
 .contact {
-    padding: 70px 0;
+    padding: 10px 0;
 }
 
 .contact-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 15px;
     text-align: center;
 }
 
 .contact-item {
-    padding: 25px;
+    padding: 10px;
 }
 
 .contact-item h3 {
@@ -325,7 +325,7 @@ body {
 .footer {
     background-color: wheat;
     color: rgb(14, 3, 57);
-    padding-top: 50px;
+    padding-top: 15px;
 }
 
 .copyright {

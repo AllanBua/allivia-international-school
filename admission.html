@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admission - Allivia International School</title>
+  <style>
+    *{margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif;}
+    body{background:#f8f9fa; color:#333; line-height:1.6;}
+    .page-header{background:#0a0e31; color:#fff; padding:20px; text-align:center;}
+    .page-header a{color:#fff; text-decoration:none;}
+    .container{max-width:950px; margin:30px auto; padding:0 15px;}
+    
+    .welcome-box{background:#fff; padding:25px; border-radius:10px; border-left:5px solid #ff0000; margin-bottom:25px; box-shadow:0 2px 10px rgba(0,0,0,0.05);}
+    .welcome-box h1{color:#0a0e31; margin-bottom:10px; font-size:28px;}
+
+    .form-box{background:#fff; padding:30px; border-radius:10px; box-shadow:0 2px 15px rgba(0,0,0,0.08); margin-bottom:25px;}
+    .form-box h2{color:#0a0e31; border-bottom:2px solid #eee; padding-bottom:10px; margin:25px 0 20px; font-size:20px;}
+    .form-box h2:first-child{margin-top:0;}
+    
+    .form-row{display:flex; gap:15px; flex-wrap:wrap;}
+    .form-group{flex:1; min-width:250px; margin-bottom:18px;}
+    .form-group label{display:block; margin-bottom:6px; font-weight:600; font-size:14px;}
+    .form-group label span{color:#ff0000;}
+    .form-group input, .form-group select, .form-group textarea{
+      width:100%; padding:12px 14px; border:1px solid #ddd; border-radius:6px; font-size:15px;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus{outline:none; border-color:#ff0000;}
+    textarea{resize:vertical; min-height:80px;}
+    
+    .radio-group{display:flex; gap:15px; flex-wrap:wrap; margin-top:5px;}
+    .radio-group label{font-weight:400; display:flex; align-items:center; gap:5px; background:#f9f9f9; padding:8px 12px; border-radius:20px; border:1px solid #eee; cursor:pointer; font-size:13px;}
+    .radio-group input{width:auto;}
+
+    .upload-area{border:2px dashed #ccc; padding:20px; border-radius:8px; background:#fafafa; text-align:center;}
+    .upload-area p{font-size:12px; color:#888; margin-top:5px;}
+
+    .btn{display:flex; justify-content:center; align-items:center; padding:14px 30px; background:#ff0000; color:#fff; border:none; border-radius:6px; font-size:16px; font-weight:700; cursor:pointer; transition:0.3s; width:100%;}
+    .btn:hover{background:#cc0000;}
+    .btn-secondary{background:#0a0e31; text-decoration:none; text-align:center; margin-top:10px;}
+
+    @media(max-width:768px){
+      .form-row{flex-direction:column; gap:0;}
+      .welcome-box h1{font-size:22px;}
+      .form-box{padding:20px;}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-header">
+    <a href="index.html">← Back to Home</a>
+    <h2>Admission Portal</h2>
+  </div>
+
+  <div class="container">
+    
+    <div class="welcome-box">
+      <h1>Welcome to Allivia International School!</h1>
+      <p>Secure your child's future today. Please fill this form correctly. Our team will contact you within 24 hours.</p>
+    </div>
+
+    <div class="form-box">
+      <form onsubmit="return submitForm(event)">
+
+        <!-- SECTION 1: PERSONAL -->
+        <h2>1. Student Information</h2>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Child's Full Name <span>*</span></label>
+            <input type="text" name="childName" required placeholder="e.g. Allan Bua">
+          </div>
+          <div class="form-group">
+            <label>Date of Birth <span>*</span></label>
+            <input type="date" name="dob" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Gender <span>*</span></label>
+            <select name="gender" required><option value="">-- Select --</option><option>Male</option><option>Female</option></select>
+          </div>
+          <div class="form-group">
+            <label>Class Applying For <span>*</span></label>
+            <select name="class" required>
+              <option value="">-- Select Class --</option>
+              <option>Baby Class</option><option>Middle Class</option><option>Top Class</option>
+              <option>P1</option><option>P2</option><option>P3</option><option>P4</option><option>P5</option><option>P6</option><option>P7</option>
+              <option>S1</option><option>S2</option><option>S3</option><option>S4</option><option>S5</option><option>S6</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- SECTION 2: PERFORMANCE -->
+        <h2>2. Previous Performance</h2>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Previous School Name <span>*</span></label>
+            <input type="text" name="prevSchool" required placeholder="e.g. Bright Future Primary">
+          </div>
+          <div class="form-group">
+            <label>Previous Class / Level</label>
+            <input type="text" name="prevClass" placeholder="e.g. P6, Top Class, S3">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Last Overall Performance / Grade <span>*</span></label>
+            <input type="text" name="performance" required placeholder="e.g. Agg 8 in PLE, 1st Grade, 80%, GPA 4.0">
+          </div>
+          <div class="form-group">
+            <label>Best Subject / Talent</label>
+            <input type="text" name="bestSubject" placeholder="e.g. Mathematics, Football, Art">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Any Special Needs / Medical Info (Optional)</label>
+          <textarea name="specialNeeds" placeholder="Tell us if child has allergies, etc..."></textarea>
+        </div>
+
+        <!-- SECTION 3: PARENT -->
+        <h2>3. Parent / Guardian Information</h2>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Parent Name <span>*</span></label>
+            <input type="text" name="parentName" required>
+          </div>
+          <div class="form-group">
+            <label>Phone Number <span>*</span></label>
+            <input type="tel" name="phone" required placeholder="0772...">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>How did you get to know about our school? <span>*</span></label>
+          <select name="source" required id="sourceSelect" onchange="checkSource()">
+            <option value="">-- Please Select --</option>
+            <option value="Friend">Through a Friend / Parent</option>
+            <option value="Radio">Radio Advertisement</option>
+            <option value="Social Media">Facebook / WhatsApp / TikTok</option>
+            <option value="Poster">Poster / Banner</option>
+            <option value="Walk-in">Passed by the School</option>
+            <option value="Website">Google / Website</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-group" id="otherSourceBox" style="display:none;">
+          <label>If Other, Please Specify</label>
+          <input type="text" name="otherSource" placeholder="e.g. Church announcement">
+        </div>
+
+        <!-- SECTION 4: DOCUMENTS -->
+        <h2>4. Attach Documents</h2>
+        <div class="upload-area">
+          <div class="form-group">
+            <label>Birth Certificate (PDF/JPG) <span>*</span></label>
+            <input type="file" name="birthCert" accept=".pdf,.jpg,.png" required>
+          </div>
+          <div class="form-group">
+            <label>Previous Report Card / Results Slip <span>*</span></label>
+            <input type="file" name="reportCard" accept=".pdf,.jpg,.png" required>
+          </div>
+          <div class="form-group">
+            <label>Passport Photo</label>
+            <input type="file" name="passport" accept=".jpg,.png">
+          </div>
+          <p>Accepted formats: PDF, JPG, PNG - Max 5MB each</p>
+        </div>
+
+        <br>
+        <button type="submit" class="btn">Submit Application</button>
+        <a href="index.html" class="btn btn-secondary">Cancel & Go Home</a>
+
+      </form>
+    </div>
+  </div>
+
+<script>
+function checkSource(){
+  const val = document.getElementById('sourceSelect').value;
+  document.getElementById('otherSourceBox').style.display = val === 'Other' ? 'block' : 'none';
+}
+function submitForm(e){
+  e.preventDefault();
+  const form = e.target;
+  const child = form.childName.value;
+  const perf = form.performance.value;
+  const source = form.source.value;
+  
+  alert("SUCCESS!\n\nApplication for " + child + " received.\nPerformance: " + perf + "\nYou heard us through: " + source + "\n\nWe will call you on " + form.phone.value + " soon.");
+  form.reset();
+  document.getElementById('otherSourceBox').style.display='none';
+  return false;
+}
+</script>
+
+</body>
+</html>

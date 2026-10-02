@@ -233,7 +233,7 @@ body {
 }
 
 .feature-card {
-    background-color: rgb(101, 111, 157);
+    background-color: rgb(72, 31, 220);
     padding: 35px 25px;
     text-align: center;
     border-radius: 8px;
@@ -252,9 +252,9 @@ body {
 }
 
 .feature-card p {
-    color: black;
-    font-family: 'Great Vibes', 'Lucida Calligraphy', cursive;
-    font-size: 25px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
     letter-spacing: 1px;
 }
 
@@ -410,6 +410,26 @@ body {
     }
 
 }
+/* ARROWS - Forward and Backward */
+.arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:10;
+    background: rgba(0,0,0,0.4);
+    color:white;
+    border:none;
+    font-size:30px;
+    padding:12px 18px;
+    cursor:pointer;
+    border-radius:50%;
+    transition:0.3s;
+}
+.arrow:hover{
+    background: #ff6a00; /* orange on hover */
+}
+.arrow.prev{ left:20px; }
+.arrow.next{ right:20px; }
 
 
 @media (max-width: 480px) {

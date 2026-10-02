@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics - Allivia International School</title>
+    <link rel="stylesheet" href="css/academics.css">
+</head>
+<body>
+
+    <!-- SAME HEADER AS HOME PAGE -->
+    <header class="site-header">
+        <div class="header-top">
+            <div class="logo-area">
+                <img src="image/logo.png" alt="Allivia Logo" class="logo-img">
+            </div>
+            <div class="school-title-area">
+                <h1>ALLIVIA INTERNATIONAL SCHOOL</h1>
+                <p class="motto">🎓 "Learn Today, Lead Tommorrow" 🎓</p>
+            </div>
+        </div>
+        <!-- 3 BARS BUTTON -->
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- DROPDOWN MENU - HIDDEN BY DEFAULT -->
+    <nav class="main-nav" id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="Academicss.html">Academics</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    </header>
+
+    <main class="page-content academics-page">
+
+        <h2 class="page-title">ACADEMICS & ACTIVITIES</h2>
+        <p class="page-subtitle"><em>Learning beyond the classroom.</em></p>
+
+        <!-- ROW 1 -->
+        <div class="academic-row">
+            <div class="academic-img">
+                <img src="image/stdpri.jpg" alt="Primary Education">
+            </div>
+            <div class="academic-box">
+                <h4>PRIMARY EDUCATION</h4>
+                <p>Our primary section provides a strong foundation in literacy, numeracy, science, social studies and creative learning.</p>
+                <p class="subjects"><strong>Subjects:</strong> Mathematics, English, Science, Social Studies, ICT, Religious Education, Creative Arts, Physical Education.</p>
+            </div>
+        </div>
+
+        <!-- ROW 2 -->
+        <div class="academic-row">
+            <div class="academic-img">
+                <img src="image/stdsec.jpg" alt="Secondary Education">
+            </div>
+            <div class="academic-box">
+                <h4>SECONDARY EDUCATION</h4>
+                <p>Our secondary programme prepares students for advanced academic study and future careers through strong academic foundations and practical learning experiences.</p>
+                <p class="subjects"><strong>Subjects:</strong> Mathematics, English Language, Biology, Chemistry, Physics, Geography, History, Computer Studies.</p>
+            </div>
+        </div>
+
+        <!-- ROW 3 -->
+        <div class="academic-row">
+            <div class="academic-img">
+                <img src="image/ICT.webp" alt="ICT Learning">
+            </div>
+            <div class="academic-box">
+                <h4>ICT & DIGITAL LEARNING</h4>
+                <p>Students develop digital skills through computer lessons, research activities and technology-supported classroom learning.</p>
+            </div>
+        </div>
+
+        <!-- ROW 4 -->
+        <div class="academic-row">
+            <div class="academic-img">
+                <img src="image/sprtpri.jpg" alt="Sports and Games">
+            </div>
+            <div class="academic-box">
+                <h4>SPORTS & GAMES</h4>
+                <p>We encourage students to participate in sports to develop teamwork, discipline, leadership and healthy lifestyles.</p>
+                <p class="subjects">Football - Basketball - Volleyball - Athletics - Chess</p>
+            </div>
+        </div>
+
+        <!-- ROW 5 -->
+        <div class="academic-row">
+            <div class="academic-img">
+                <img src="image/clubs.jpg" alt="Clubs and Activities">
+            </div>
+            <div class="academic-box">
+                <h4>CLUBS & ACTIVITIES</h4>
+                <p>Debate Club - Science Club - Music - Drama - Art - Environment Club</p>
+            </div>
+        </div>
+
+        <!-- BUTTON TO MORE ABOUT ACADEMICS -->
+        <div class="more-academics">
+            <a href="academics.html" class="btn-more">View Full Academic Programs & Curriculum →</a>
+            <p class="more-note">Nursery, Primary & Secondary - Admissions Open 2026</p>
+        </div>
+
+        <div class="contact-strip">
+            <span>📍 Plot 15, Kitaasa Road, Entebbe, Uganda</span>
+            <span>📞 +256 772 252 164</span>
+            <span>✉️ info@ais.ac.ug</span>
+            <span>🌐 www.ais.ac.ug</span>
+        </div>
+
+    </main>
+    <!-- The footer -->
+    <footer class="footer">
+
+        <div class="copyright">
+
+            <p>
+                © 2026 Allivia International School. All Rights Reserved.   info@ais.ac.ug
+            </p>
+
+        </div>
+
+    </footer>
+    <script>
+const toggle = document.getElementById('menuToggle');
+const nav = document.getElementById('mainNav');
+
+toggle.addEventListener('click', () => {
+    nav.classList.toggle('show');
+    toggle.classList.toggle('active');
+});
+
+// Close if you click outside
+document.addEventListener('click', (e) => {
+    if(!toggle.contains(e.target) && !nav.contains(e.target)){
+        nav.classList.remove('show');
+        toggle.classList.remove('active');
+    }
+});
+</script>
+
+</body>
+</html>

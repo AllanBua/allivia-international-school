@@ -36,6 +36,23 @@
   <div class="page-header">
     <a href="index.html">← Back to Home</a>
     <h2>Our Academics</h2>
+
+    <!-- 3 BARS BUTTON -->
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- DROPDOWN MENU - HIDDEN BY DEFAULT -->
+    <nav class="main-nav" id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="Academicss.html">Academics</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
   </div>
 
   <div class="container">
@@ -88,6 +105,35 @@
       <a href="programs.html" class="btn btn-dark">See Our Programs</a>
     </div>
   </div>
+  <!-- The footer -->
+    <footer class="footer">
+
+        <div class="copyright">
+
+            <p>
+                © 2026 Allivia International School. All Rights Reserved.   info@ais.ac.ug
+            </p>
+
+        </div>
+
+    </footer>
+    <script>
+const toggle = document.getElementById('menuToggle');
+const nav = document.getElementById('mainNav');
+
+toggle.addEventListener('click', () => {
+    nav.classList.toggle('show');
+    toggle.classList.toggle('active');
+});
+
+// Close if you click outside
+document.addEventListener('click', (e) => {
+    if(!toggle.contains(e.target) && !nav.contains(e.target)){
+        nav.classList.remove('show');
+        toggle.classList.remove('active');
+    }
+});
+</script>
 
 </body>
 </html>

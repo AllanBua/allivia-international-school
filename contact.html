@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Allivia International School</title>
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+    <!-- SAME HEADER AS HOME -->
+    <header class="site-header">
+        <div class="header-top">
+            <div class="logo-area">
+                <img src="image/logo.png" alt="Allivia Logo" class="logo-img">
+            </div>
+            <div class="school-title-area">
+                <h1>ALLIVIA INTERNATIONAL SCHOOL</h1>
+                <p class="motto">🎓 "Learn Today, Lead Tommorrow" 🎓</p>
+            </div>
+        </div>
+       <!-- 3 BARS BUTTON -->
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- DROPDOWN MENU - HIDDEN BY DEFAULT -->
+    <nav class="main-nav" id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="Academicss.html">Academics</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    </header>
+
+    <main class="page-content">
+
+        <h2 class="page-title">CONTACT US</h2>
+        <p class="page-subtitle">We would love to hear from you.</p>
+
+        <!-- TOP BLUE BAR -->
+        <div class="contact-top-bar">
+            <div class="top-item">
+                <h4>📌 OUR ADDRESS</h4>
+                <p>Plot 15, Kitaasa Road<br>Entebbe, Uganda</p>
+            </div>
+            <div class="top-item">
+                <h4>📞 TELEPHONE</h4>
+                <p>+256 772 252 164<br>+256 752 252 164</p>
+            </div>
+            <div class="top-item">
+                <h4>✉️ EMAIL</h4>
+                <p>info@ais.ac.ug<br>admissions@ais.ac.ug</p>
+            </div>
+        </div>
+
+        <h3 class="section-title">SEND US A MESSAGE</h3>
+
+        <form class="contact-form">
+            <div class="form-row">
+                <label>Full Name:</label>
+                <input type="text" required>
+            </div>
+            <div class="form-row">
+                <label>Email Address:</label>
+                <input type="email" required>
+            </div>
+            <div class="form-row">
+                <label>Telephone Number:</label>
+                <input type="tel">
+            </div>
+            <div class="form-row">
+                <label>Subject:</label>
+                <input type="text">
+            </div>
+            <div class="form-row message-row">
+                <label>Message:</label>
+                <div class="message-lines">
+                    <textarea rows="4" placeholder="Write your message here..."></textarea>
+                </div>
+            </div>
+            <div class="btn-wrap">
+                <button type="submit" class="btn-send">SEND MESSAGE</button>
+            </div>
+        </form>
+
+        <h3 class="section-title">SCHOOL LOCATION</h3>
+
+        <div class="map-wrap">
+            <!-- Replace with real Google Maps embed -->
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.269129234579!2d32.45211378114105!3d0.041330149332209576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177d86c48a9da6df%3A0x234f96be35940214!2sBugonga%2C%20Entebbe!5e0!3m2!1sen!2sug!4v1790599144402!5m2!1sen!2sug" 
+                width="100%" height="350" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy">
+            </iframe>
+            <div class="map-pin">📍</div>
+        </div>
+
+        <p class="location-text">
+            Allivia International School<br>
+            <strong>📍 Plot 15, Kitaasa Road<br>Entebbe, Uganda</strong>
+        </p>
+
+         <div class="contact-strip">
+            <span>📍 Plot 15, Kitaasa Road, Entebbe, Uganda</span>
+            <span>📞 +256 772 252 164</span>
+            <span>✉️ info@ais.ac.ug</span>
+            <span>🌐 www.ais.ac.ug</span>
+        </div>
+
+    </main>
+<!-- The footer -->
+    <footer class="footer">
+
+        <div class="copyright">
+
+            <p>
+                © 2026 Allivia International School. All Rights Reserved.   info@ais.ac.ug
+            </p>
+
+        </div>
+
+    </footer>
+    <script>
+const toggle = document.getElementById('menuToggle');
+const nav = document.getElementById('mainNav');
+
+toggle.addEventListener('click', () => {
+    nav.classList.toggle('show');
+    toggle.classList.toggle('active');
+});
+
+// Close if you click outside
+document.addEventListener('click', (e) => {
+    if(!toggle.contains(e.target) && !nav.contains(e.target)){
+        nav.classList.remove('show');
+        toggle.classList.remove('active');
+    }
+});
+</script>
+</body>
+</html>

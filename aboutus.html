@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Allivia International School</title>
+    <link rel="stylesheet" href="css/aboutus.css"> <!-- Use ONE css for all pages -->
+</head>
+<body>
+
+    <!-- ========= SAME HEADER AS HOME PAGE ========= -->
+    <header class="site-header">
+        <div class="header-top">
+            <div class="logo-area">
+                <img src="image/logo.png" alt="Allivia Logo" class="logo-img">
+            </div>
+            <div class="school-title-area">
+                <h1>ALLIVIA INTERNATIONAL SCHOOL</h1>
+                <p class="motto">🎓 "Learn Today, Lead Tommorrow" 🎓</p>
+            </div>
+        </div>
+       <!-- 3 BARS BUTTON -->
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- DROPDOWN MENU - HIDDEN BY DEFAULT -->
+    <nav class="main-nav" id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="Academicss.html">Academics</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    </header>
+
+    <!-- ========= ABOUT PAGE CONTENT ========= -->
+    <main class="page-content about-page">
+        
+        <h2 class="page-title">ABOUT US</h2>
+
+        <div class="about-hero-wrap">
+            <img src="image/Students5.jpeg" alt="Classroom" class="about-hero-img">
+        </div>
+
+        <h3 class="section-title">ABOUT ALLIVIA INTERNATIONAL SCHOOL</h3>
+
+        <div class="text-center">
+            <h4 class="red-heading">Our Background</h4>
+            <p>Allivia International School was established with the goal of providing quality, affordable and holistic education to learners in Uganda. We are a private co-educational day and boarding school offering Nursery, Primary and Secondary sections.</p>
+            <p>The school provides a welcoming learning environment where students are encouraged to think critically, work collaboratively and develop strong moral values from early years through to secondary level.</p>
+        </div>
+
+        <div class="blue-box">
+            <h4 class="red-heading"> 🎯OUR MISSION </h4>
+            <p><strong>To provide quality and holistic education that develops academically excellent, creative, disciplined and responsible learners who can positively contribute to society. </strong></p>
+            <h4 class="red-heading" style="margin-top:25px;">💡 OUR VISION</h4>
+            <p><strong>To become a leading centre of excellence in education, producing confident, innovative and responsible leaders for tomorrow.</strong></p>
+        </div>
+
+        <h3 class="section-title">OUR CORE VALUES</h3>
+        <div class="core-values">
+            <span>INTEGRITY</span> | <span>DISCIPLINE</span> | <span>RESPECT</span> | <span>EXCELLENCE</span> | <span>TEAMWORK</span>
+        </div>
+<hr style="border: 3px solid #045bf3;">
+        <h3 class="section-title left">A MESSAGE FROM THE HEADTEACHER</h3>
+        <div class="headteacher-box">
+            <div class="ht-photo">
+                <img src="image/buaallan.jpg" alt="Headteacher" onerror="this.src='https://via.placeholder.com/120x140?text=Photo'">
+                <p><strong>Mr. Allan Bua</strong><br>Headteacher</p>
+            </div>
+            <div class="ht-text">
+                <p><strong>Dear Parents, Guardians and Learners,</strong></p>
+                <p>It is my great pleasure to welcome you to Allivia International School. We are committed to providing every learner with opportunities to learn, grow and succeed.</p>
+                <p>At Allivia, we are proud to be a complete learning centre offering <strong>Nursery, Primary and Secondary</strong> education. This allows us to nurture a child from their early formative years in Nursery, build a strong academic foundation in Primary, and prepare them for higher education and life in Secondary, all within the same caring and disciplined environment.</p>
+                <p>Our dedicated team focuses on academic excellence, character, creativity, and leadership. We work closely with parents to bring out the very best in each learner.</p>
+                <p><strong>Karibu sana!</strong></p>
+            </div>
+        </div>
+
+         <div class="contact-strip">
+            <span>📍 Plot 15, Kitaasa Road, Entebbe, Uganda</span>
+            <span>📞 +256 772 252 164</span>
+            <span>✉️ info@ais.ac.ug</span>
+            <span>🌐 www.ais.ac.ug</span>
+        </div>
+
+    </main>
+
+    <!-- The footer -->
+        <footer class="footer">
+
+            <div class="copyright">
+
+                 <p>
+                     © 2026 Allivia International School. All Rights Reserved.   info@ais.ac.ug
+                 </p>
+
+            </div>
+
+        </footer>
+        <script>
+const toggle = document.getElementById('menuToggle');
+const nav = document.getElementById('mainNav');
+
+toggle.addEventListener('click', () => {
+    nav.classList.toggle('show');
+    toggle.classList.toggle('active');
+});
+
+// Close if you click outside
+document.addEventListener('click', (e) => {
+    if(!toggle.contains(e.target) && !nav.contains(e.target)){
+        nav.classList.remove('show');
+        toggle.classList.remove('active');
+    }
+});
+</script>
+
+</body>
+</html>

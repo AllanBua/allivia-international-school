@@ -1,0 +1,178 @@
+/* ===== GENERAL - FULL WIDTH FIX ===== */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: Arial, sans-serif; background:#fff; width:100%; overflow-x:hidden; }
+
+/* ===== HEADER - SAME FOR ALL PAGES ===== */
+.site-header{
+    background:#151830; /* your dark navy from home page */
+    color:white;
+    width:100%;
+    padding:20px 40px 0 40px;
+}
+.header-top{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+.logo-img{ width:90px; height:auto; }
+.school-title-area{ flex:1; text-align:center; }
+.school-title-area h1{
+    font-family: 'Times New Roman', serif;
+    font-size:32px;
+    letter-spacing:1px;
+}
+.motto{
+    font-style:italic;
+    letter-spacing:4px;
+    margin-top:8px;
+    color:#d1d1d1;
+    font-size:14px;
+}
+.main-nav{
+    display:flex;
+    justify-content:flex-end;
+    gap:25px;
+    padding:15px 0;
+    margin-top:10px;
+}
+.main-nav a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+}
+.main-nav a.active, .main-nav a:hover{
+    color:#ff6a00; /* orange like Home */
+}
+
+/* ===== PAGE CONTENT - FULL WIDTH ===== */
+.page-content{
+    width:100%;
+    max-width:100%;
+    background:#fdf0e6;
+    padding:40px 5%;
+}
+.page-title{
+    text-align:center;
+    color:#0a2a5a;
+    margin-bottom:20px;
+}
+.about-hero-wrap{ display:flex; justify-content:center; margin:20px 0; }
+.about-hero-img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    mask-image: radial-gradient(ellipse at center, black 70%, transparent 95%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 70%, transparent 95%);
+}
+.section-title{
+    text-align:center;
+    color:#0a2a5a;
+    margin:30px 0 15px;
+    text-transform:uppercase;
+}
+.section-title.left{ text-align:left; }
+.text-center{ text-align:center; line-height:1.7; font-size:14px; padding:0 10%; }
+.red-heading{ color:#8b0000; font-size:13px; margin-bottom:8px; text-transform:uppercase; }
+.blue-box{
+    background:#a6d3e0;
+    width:100vw;
+    margin:25px -5.5%;
+    padding:20px 8%;
+    text-align:center;
+}
+.core-values{ text-align:center; margin:15px 0 30px; font-size:13px; font-weight:bold; }
+.headteacher-box{ display:flex; gap:30px; align-items:flex-start; margin-top:15px; }
+.ht-photo{ width:120px; text-align:center; flex-shrink:0; }
+.ht-photo img{ width:100%; border:1px solid #ccc; }
+.ht-text p{ margin-bottom:12px; line-height:1.7; font-size:14px; }
+.contact-strip{
+    margin-top:30px;
+    border-top:1px solid #ccc;
+    padding-top:12px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    font-size:11px;
+    font-weight:bold;
+}
+.footer {
+    background-color: wheat;
+    color: rgb(14, 3, 57);
+    padding-top: 15px;
+}
+
+.copyright {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 14px;
+}
+
+/* ===== 3 BARS ICON ===== */
+.site-header{ position:relative; }
+.menu-toggle{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    width:26px;
+    height:18px;
+    cursor:pointer;
+    position:absolute;
+    right:20px;
+    top:32px;
+    z-index:100;
+}
+.menu-toggle span{
+    display:block;
+    height:3px;
+    width:100%;
+    background:white;
+    border-radius:3px;
+    transition:0.3s;
+}
+
+/* ===== DROPDOWN ===== */
+.main-nav{
+    display:none; /* hidden until tap */
+    flex-direction:column;
+    position:absolute;
+    top:85px;
+    right:15px;
+    width:200px;
+    background:#0f122e;
+    border-radius:10px;
+    padding:10px 0;
+    box-shadow:0 5px 20px rgba(0,0,0,0.4);
+    z-index:99;
+}
+.main-nav.show{ display:flex; }
+
+.main-nav a{
+    color:white;
+    text-decoration:none;
+    padding:12px 18px;
+    font-size:14px;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.main-nav a:last-child{ border-bottom:none; }
+.main-nav a:hover{
+    background:#ff6a00;
+}
+
+/* Animation when active - bars turn to X */
+.menu-toggle.active span:nth-child(1){
+    transform:rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.active span:nth-child(2){ opacity:0; }
+.menu-toggle.active span:nth-child(3){
+    transform:rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile */
+@media(max-width:768px){
+    .site-header{ padding:15px; }
+    .header-top{ flex-direction:column; }
+    .main-nav{ justify-content:center; }
+    .headteacher-box{ flex-direction:column; }
+    .school-title-area h1{ font-size:20px; }
+}

@@ -39,10 +39,10 @@
     <nav class="navbar">
         <ul>
             <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Academics</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="Academicss.html">Academics</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
   </header>
@@ -107,6 +107,9 @@
   </div>
             </div>
         </div>
+         <!-- ARROWS -->
+    <button class="arrow prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="arrow next" onclick="changeSlide(1)">&#10095;</button>
 
     </section>
     <section class="welcome-section">
@@ -309,17 +312,37 @@
     </footer>
     <a href="#" id="backToTop">↑</a>
 <script>
-let slideIndex = 0;
-const slides = document.querySelectorAll(".slide");
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+let slideInterval;
 
-function showSlides() {
-  slides.forEach(slide => slide.classList.remove("active"));
-  slideIndex++;
-  if (slideIndex > slides.length) { slideIndex = 1; }
-  slides[slideIndex-1].classList.add("active");
-  setTimeout(showSlides, 8000); // changes every 8 seconds
+function showSlide(index){
+    slides.forEach(s => s.classList.remove('active'));
+    if(index >= slides.length) currentSlide = 0;
+    if(index < 0) currentSlide = slides.length - 1;
+    slides[currentSlide].classList.add('active');
 }
-showSlides();
+
+function changeSlide(n){
+    currentSlide += n;
+    showSlide(currentSlide);
+    resetTimer(); // reset auto-slide when user clicks arrow
+}
+
+// Auto slide every 5 seconds
+function startTimer(){
+    slideInterval = setInterval(()=> {
+        currentSlide++;
+        showSlide(currentSlide);
+    }, 5000);
+}
+function resetTimer(){
+    clearInterval(slideInterval);
+    startTimer();
+}
+
+showSlide(currentSlide);
+startTimer();
 // Back to top button
 let backToTop = document.getElementById("backToTop");
 

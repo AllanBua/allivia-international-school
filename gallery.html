@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Allivia International School</title>
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+
+    <!-- SAME HEADER AS HOME -->
+    <header class="site-header">
+        <div class="header-top">
+            <div class="logo-area">
+                <img src="image/logo.png" alt="Allivia Logo" class="logo-img">
+            </div>
+            <div class="school-title-area">
+                <h1>ALLIVIA INTERNATIONAL SCHOOL</h1>
+                <p class="motto">🎓 "Learn Today, Lead Tommorrow" 🎓</p>
+            </div>
+        </div>
+        <!-- 3 BARS BUTTON -->
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- DROPDOWN MENU - HIDDEN BY DEFAULT -->
+    <nav class="main-nav" id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="Academicss.html">Academics</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    </header>
+
+    <main class="page-content">
+
+        <h2 class="page-title">GALLERY</h2>
+        <p class="page-subtitle">A glimpse into life at Allivia International School.</p>
+
+        <!-- ROW 1 -->
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="image/Picture1.png" alt="Classroom">
+                <h4>Learning in the Classroom</h4>
+                <p>Interactive classroom lesson.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="image/Picture8.png" alt="Science Laboratory">
+                <h4>Science Laboratory</h4>
+                <p>Practical Science Experiments.</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- ROW 2 -->
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="image/Picture9.png" alt="Sports Day">
+                <h4>Sports Day</h4>
+                <p>Teamwork and sporting talent.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="image/Picture10.png" alt="Computer Laboratory">
+                <h4>Computer Laboratory</h4>
+                <p>Digital and ICT skills.</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- ROW 3 -->
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="image/Picture11.png" alt="School Assembly">
+                <h4>School Assembly</h4>
+                <p>Students and teachers together.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="image/Picture12.png" alt="School Environment">
+                <h4>School Environment</h4>
+                <p>Clean, safe and welcoming compound.</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+         <div class="contact-strip">
+            <span>📍 Plot 15, Kitaasa Road, Entebbe, Uganda</span>
+            <span>📞 +256 772 252 164</span>
+            <span>✉️ info@ais.ac.ug</span>
+            <span>🌐 www.ais.ac.ug</span>
+        </div>
+
+    </main>
+
+    <!-- The footer -->
+    <footer class="footer">
+
+        <div class="copyright">
+
+            <p>
+                © 2026 Allivia International School. All Rights Reserved.   info@ais.ac.ug
+            </p>
+
+        </div>
+
+    </footer>
+    <script>
+const toggle = document.getElementById('menuToggle');
+const nav = document.getElementById('mainNav');
+
+toggle.addEventListener('click', () => {
+    nav.classList.toggle('show');
+    toggle.classList.toggle('active');
+});
+
+// Close if you click outside
+document.addEventListener('click', (e) => {
+    if(!toggle.contains(e.target) && !nav.contains(e.target)){
+        nav.classList.remove('show');
+        toggle.classList.remove('active');
+    }
+});
+</script>
+
+</body>
+</html>
